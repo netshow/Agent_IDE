@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pros & Cons - Agent IDE Org</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fa-solid fa-code-branch"></i> Agent IDE Org
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Platform
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services.html">Services</a></li>
+                            <li><a class="dropdown-item" href="products.html">Products</a></li>
+                            <li><a class="dropdown-item active" aria-current="page" href="pros-cons.html">Pros and Cons</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Company
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">Our Values</h6></li>
+                            <li><a class="dropdown-item" href="credibility.html">Credibility</a></li>
+                            <li><a class="dropdown-item" href="experience.html">Experience</a></li>
+                            <li><a class="dropdown-item" href="expertise.html">Expertise</a></li>
+                            <li><a class="dropdown-item" href="authority.html">Authority</a></li>
+                            <li><a class="dropdown-item" href="trustworthy.html">Trustworthy</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Resources
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="faq.html">Popular Questions</a></li>
+                            <li><a class="dropdown-item" href="reviews.html">Reviews</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <button class="btn me-2" id="theme-toggler" type="button">
+                        <i class="fas fa-sun" id="theme-icon"></i>
+                    </button>
+                    <a href="#" class="btn btn-login me-2">Login</a>
+                    <a href="demo.html" class="btn btn-primary-custom">Request a demo</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="page-header">
+        <div class="container">
+            <h1>A Balanced View: Pros & Cons</h1>
+            <p class="lead">An honest assessment of our platform to help you make an informed decision.</p>
+        </div>
+    </header>
+    <main class="page-content">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h2 class="text-success">Pros: Why Developers Choose Us</h2>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <div><strong>Open Source & No Lock-In:</strong> Freedom and transparency are core to our mission. You can inspect, modify, and self-host the entire platform.</div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <div><strong>Specialized, Agent-First Tooling:</strong> Our IDE is purpose-built for agents, offering features like reasoning debuggers and tool profilers that you won't find in generic editors.</div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <div><strong>Integrated MLOps Lifecycle:</strong> We cover the entire lifecycle from development and debugging to one-click deployment and real-time monitoring, reducing complexity.</div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-check-circle text-success me-3"></i>
+                            <div><strong>Focus on Responsible AI:</strong> Built-in governance and ethics tools make it easier to develop transparent, fair, and accountable agents from the start.</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="text-warning">Cons: Where We're Still Growing</h2>
+                     <ul class="list-group">
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-exclamation-circle text-warning me-3"></i>
+                            <div><strong>Steeper Learning Curve:</strong> As a specialized IDE, there's a learning curve compared to simply writing a script in a basic text editor. Mastering all features takes time.</div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-exclamation-circle text-warning me-3"></i>
+                            <div><strong>Opinionated Framework:</strong> While extensible, our IDE promotes certain design patterns and workflows for building agents. This may not suit every possible approach or esoteric use case.</div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-exclamation-circle text-warning me-3"></i>
+                            <div><strong>Community-Reliant Ecosystem:</strong> The richness of the Agent Marketplace depends on active community participation. While growing rapidly, it may not yet have a pre-built module for every niche need.</div>
+                        </li>
+                         <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-exclamation-circle text-warning me-3"></i>
+                            <div><strong>Focus on Development, Not Model Training:</strong> Agent IDE Org is designed for building, deploying, and managing agents, not for training foundational models from scratch. You are expected to bring your own models.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <a href="index.html" class="footer-logo d-block mb-2">AgentIDE.ai</a>
+                    <p>Empowering everyone to build AI agents with zero-code.<br>
+                        Powered by <a href="https://app.netshow.pro" target="_blank">NetShow.AI</a></p>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-3">Resources</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                        <li class="mb-2"><a href="faq.html">FAQ</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6 mb-4 mb-lg-0">
+                    <h5 class="text-white mb-3">Legal</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="privacy.html">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="terms.html">Terms of Use</a></li>
+                        <li><a href="disclosure.html">Disclosure</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="d-flex justify-content-between align-items-center flex-column flex-sm-row">
+                <p class="mb-2 mb-sm-0">&copy; 2025 NetShow.AI. All rights reserved.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

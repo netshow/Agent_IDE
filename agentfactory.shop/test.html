@@ -1,0 +1,74 @@
+<div class="row" id="">
+                        <center>
+                            <h3>Controls for Gradding Settings</h3>
+                        </center>
+
+                        <div class="col-lg-4 col-md-8 my-3" style="margin: auto">
+                            <label>Egg Grading Setting</label>
+                            <select name="egg_grading_setting" form="form_controls" id="egg_grading_setting" class="form-select" onchange="selectedEggGrading(this.value)">
+                                <option value="1">default</option>                            </select>
+                        </div>
+                        
+
+                        
+                        <div class="col-12 col-lg-4 col-md-8 my-3">
+                            <div class="table-responsive">
+<table id="selectedGraddingSettings" class="">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Cut</th>
+                                    <th>Percent</th>
+                                </tr>
+                            </thead>
+                            <tbody id="selectedGraddingSettingsBody"><tr data-setting_id="1" data-gradding_id="1"><td><input type="text" class="form-control" form="form_controls" name="minimal grading"></td><td><input type="number" class="form-control" form="form_controls" id="price_0" name="price_0" style="width: 125px;"></td><td><input type="number" class="form-control" form="form_controls" id="cut_0" name="cut_0" style="width: 125px;"></td><td><input type="number" class="form-control" form="form_controls" id="percent_0" name="percent_0" style="width: 125px;"></td><td><button type="button" class="green m_control" id="btn_monthly_grading_setting" onclick="gradingSettingMonthly(this); GradingSettingControlMonthly(1, 1, 0); choiceMonthlyDaily(); ">Set all </button></td><td><button type="button" class="green d_control" id="btn_daily_grading_setting" onclick="gradingSettingDaily(this); GradingSettingControlDaily(1, 1,0); choiceMonthlyDaily()" style="display: none;">Set all </button></td></tr><tr data-setting_id="2" data-gradding_id="1"><td><input type="text" class="form-control" form="form_controls" name="small grading"></td><td><input type="number" class="form-control" form="form_controls" id="price_1" name="price_1" style="width: 125px;"></td><td><input type="number" class="form-control" form="form_controls" id="cut_1" name="cut_1" style="width: 125px;"></td><td><input type="number" class="form-control" form="form_controls" id="percent_1" name="percent_1" style="width: 125px;"></td><td><button type="button" class="green m_control" id="btn_monthly_grading_setting" onclick="gradingSettingMonthly(this); GradingSettingControlMonthly(1, 2, 1); choiceMonthlyDaily(); ">Set all </button></td><td><button type="button" class="green d_control" id="btn_daily_grading_setting" onclick="gradingSettingDaily(this); GradingSettingControlDaily(1, 2,1); choiceMonthlyDaily()" style="display: none;">Set all </button></td></tr><tr data-setting_id="3" data-gradding_id="1"><td><input type="text" class="form-control" form="form_controls" name="large grading"></td><td><input type="number" class="form-control" form="form_controls" id="price_2" name="price_2" style="width: 125px;"></td><td><input type="number" class="form-control" form="form_controls" id="cut_2" name="cut_2" style="width: 125px;"></td><td><input type="number" class="form-control" form="form_controls" id="percent_2" name="percent_2" style="width: 125px;"></td><td><button type="button" class="green m_control" id="btn_monthly_grading_setting" onclick="gradingSettingMonthly(this); GradingSettingControlMonthly(1, 3, 2); choiceMonthlyDaily(); ">Set all </button></td><td><button type="button" class="green d_control" id="btn_daily_grading_setting" onclick="gradingSettingDaily(this); GradingSettingControlDaily(1, 3,2); choiceMonthlyDaily()" style="display: none;">Set all </button></td></tr><tr data-setting_id="4" data-gradding_id="1"><td><input type="text" class="form-control" form="form_controls" name="broken grading"></td><td><input type="number" class="form-control" form="form_controls" id="price_3" name="price_3" style="width: 125px;"></td><td><input type="number" class="form-control" form="form_controls" id="cut_3" name="cut_3" style="width: 125px;"></td><td><input type="number" class="form-control" form="form_controls" id="percent_3" name="percent_3" style="width: 125px;"></td><td><button type="button" class="green m_control" id="btn_monthly_grading_setting" onclick="gradingSettingMonthly(this); GradingSettingControlMonthly(1, 4, 3); choiceMonthlyDaily(); ">Set all </button></td><td><button type="button" class="green d_control" id="btn_daily_grading_setting" onclick="gradingSettingDaily(this); GradingSettingControlDaily(1, 4,3); choiceMonthlyDaily()" style="display: none;">Set all </button></td></tr></tbody>
+                        </table>
+                        </div>
+</div>
+
+
+                        <!--
+                                                                                                                                                                                                                    code pasted somewhere else
+                                                                                                                                                                                                                    -->
+
+                        <div id="gradding_toggle_div" style="display: none; margin: auto;justify-content: center;">
+                            <div class="row col-md-12">
+                                <div class="col-md-4">
+                                    <p>
+                                    </p><div class="helpicon tooltip tooltipstered">
+                                        ?</div>By cut<p></p>
+                                    
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="checkbox" form="form_controls" name="control_switch_grading" id="switch_grading" value="by cut" onclick="enableCutPriceGrading();" class="checkbox">
+                                    <label for="switch_grading" class="toggle_gradding">
+                                    </label>
+                                </div>
+                                <div class="col-md-4">
+                                    <p>
+                                    </p><div class="helpicon tooltip tooltipstered">
+                                        ?</div>By Price<p></p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        
+
+
+                        <div class="col-md-12">
+                            <center><button class="green m_control" onclick="setMon();">Set
+                                    Controls
+                                    Monthly</button>
+                                <button class="green d_control" onclick="setDaily();" style="display: none;">Set
+                                    Controls Daily</button>
+                            </center>
+                        </div>
+
+
+
+
+                    </div>
