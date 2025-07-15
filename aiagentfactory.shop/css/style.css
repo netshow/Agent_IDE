@@ -1,0 +1,414 @@
+/* --- Theme Variables --- */
+:root {
+    --primary-color: #4A24CB; /* A deep, modern purple */
+    --primary-hover-color: #3B1DA2;
+    --accent-color: #A455FF; /* Lighter purple for accents like the "-continuously" text */
+    
+    /* Light Theme Colors */
+    --text-color-light: #111827; /* Darker text for better contrast */
+    --text-muted-light: #6B7280;
+    --bg-color-light: #FFFFFF;
+    --card-bg-light: #F9FAFB;
+    --border-color-light: #E5E7EB;
+    --navbar-bg-light: rgba(255, 255, 255, 0.85);
+    --link-color-light: var(--primary-color);
+    --link-hover-light: var(--primary-hover-color);
+
+    /* Dark Theme Colors */
+    --text-color-dark: #F3F4F6;
+    --text-muted-dark: #9CA3AF;
+    --bg-color-dark: #111827;
+    --card-bg-dark: #1F2937;
+    --border-color-dark: #374151;
+    --navbar-bg-dark: rgba(17, 24, 39, 0.85);
+    --link-color-dark: #C4B5FD;
+    --link-hover-dark: #E9D5FF;
+
+    /* Static Footer Colors (always dark) */
+    --footer-bg: #111827;
+    --footer-text: #9CA3AF;
+    --footer-heading: #FFFFFF;
+    --footer-border: #374151;
+
+    --font-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    /* --- Current Theme Variables (DO NOT EDIT) --- */
+    --current-text-color: var(--text-color-light);
+    --current-text-muted: var(--text-muted-light);
+    --current-bg-color: var(--bg-color-light);
+    --current-card-bg: var(--card-bg-light);
+    --current-border-color: var(--border-color-light);
+    --current-navbar-bg: var(--navbar-bg-light);
+    --current-link-color: var(--link-color-light);
+    --current-link-hover: var(--link-hover-light);
+}
+
+[data-theme="dark"] {
+    --current-text-color: var(--text-color-dark);
+    --current-text-muted: var(--text-muted-dark);
+    --current-bg-color: var(--bg-color-dark);
+    --current-card-bg: var(--card-bg-dark);
+    --current-border-color: var(--border-color-dark);
+    --current-navbar-bg: var(--navbar-bg-dark);
+    --current-link-color: var(--link-color-dark);
+    --current-link-hover: var(--link-hover-dark);
+}
+
+/* --- Global Styles --- */
+body {
+    font-family: var(--font-sans-serif);
+    background-color: var(--current-bg-color);
+    color: var(--current-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--current-text-color);
+    font-weight: 700;
+}
+
+p {
+    color: var(--current-text-color);
+    opacity: 0.9;
+}
+
+.text-muted {
+    color: var(--current-text-muted) !important;
+}
+
+a {
+    color: var(--current-link-color);
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+a:hover {
+    color: var(--current-link-hover);
+    text-decoration: none;
+}
+
+hr {
+    border-top: 1px solid var(--current-border-color);
+}
+
+.bg-light-subtle {
+    background-color: var(--current-card-bg) !important;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--primary-hover-color);
+    border-color: var(--primary-hover-color);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #fff;
+}
+
+.form-control, .form-select {
+    background-color: var(--current-bg-color);
+    color: var(--current-text-color);
+    border: 1px solid var(--current-border-color);
+    padding: 0.75rem 1rem;
+}
+.form-control:focus, .form-select:focus {
+    background-color: var(--current-bg-color);
+    color: var(--current-text-color);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(74, 36, 203, 0.25);
+}
+
+/* --- Navbar --- */
+.navbar {
+    background-color: var(--current-navbar-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--current-border-color);
+    padding: 1rem 0;
+}
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--current-text-color) !important;
+}
+.nav-link {
+    color: var(--current-text-color) !important;
+    font-weight: 500;
+}
+.nav-link.active {
+    color: var(--primary-color) !important;
+}
+[data-theme="dark"] .nav-link.active {
+    color: var(--accent-color) !important;
+}
+.nav-link:hover {
+    color: var(--current-link-hover) !important;
+}
+.navbar-toggler {
+    border-color: var(--current-border-color);
+}
+.dropdown-menu {
+    background-color: var(--current-card-bg);
+    border: 1px solid var(--current-border-color);
+}
+.dropdown-item {
+    color: var(--current-text-color) !important;
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: var(--primary-color);
+    color: #fff !important;
+}
+.theme-btn {
+    background-color: transparent;
+    border: 1px solid var(--current-border-color);
+    color: var(--current-text-color);
+}
+.btn-nav-login {
+    font-weight: 600;
+    color: var(--current-text-color) !important;
+}
+.btn-nav-demo {
+    background-color: var(--primary-color);
+    color: #fff !important;
+    font-weight: 600;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+.btn-nav-demo:hover {
+    background-color: var(--primary-hover-color);
+}
+
+/* --- Hero Section (Homepage) --- */
+.hero-section {
+    padding: 6rem 0;
+    background-color: var(--current-bg-color);
+}
+.hero-text-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+.hero-text-content .lead {
+    font-size: 1.15rem;
+    color: var(--current-text-muted);
+}
+.hero-text-content .accent-text {
+    color: var(--accent-color);
+}
+.hero-form .form-control {
+    padding: 1rem;
+}
+.hero-form .btn-primary {
+    padding: 1rem 1.5rem;
+}
+.hero-image-container img {
+    border-radius: 0.75rem;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+}
+.book-call-link {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 600;
+}
+
+/* --- Demo Page --- */
+.demo-page-section {
+    padding: 5rem 0;
+    background-color: var(--current-card-bg);
+}
+.demo-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+.demo-content li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--current-text-color);
+}
+.demo-content li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+.demo-form-container {
+    background-color: var(--current-bg-color);
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+}
+
+/* --- General Content Sections --- */
+section {
+    padding: 4rem 0;
+}
+.section-title {
+    font-size: 2.25rem;
+    font-weight: 800;
+    margin-bottom: 2.5rem;
+    position: relative;
+    padding-bottom: 0.75rem;
+    text-align: center;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* --- Cards --- */
+.card, .feature-card {
+    background-color: var(--current-card-bg);
+    border: 1px solid var(--current-border-color);
+    color: var(--current-text-color);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border-radius: 0.5rem;
+}
+.card:hover, .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+.card-body, .card-header, .card-footer {
+    background-color: transparent;
+    color: inherit;
+}
+.card-body p {
+    color: var(--current-text-muted);
+}
+.card h4, .card h3 {
+    color: var(--current-text-color);
+}
+.card .text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* --- Page Header for Inner Pages --- */
+.page-header {
+    background-color: var(--current-card-bg);
+    padding: 4rem 0;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--current-border-color);
+}
+.page-header h1 {
+    color: var(--primary-color);
+    font-size: 2.75rem;
+}
+.page-header .lead {
+    font-size: 1.25rem;
+    color: var(--current-text-muted);
+}
+
+/* --- Accordion (FAQ) --- */
+.accordion-item {
+    background-color: var(--current-card-bg);
+    border: 1px solid var(--current-border-color);
+}
+.accordion-button {
+    background-color: var(--current-card-bg);
+    color: var(--current-text-color);
+    font-weight: 600;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: var(--current-card-bg);
+    box-shadow: inset 0 -1px 0 var(--current-border-color);
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(74, 36, 203, 0.25);
+    border-color: var(--current-border-color);
+}
+.accordion-body {
+    background-color: var(--current-bg-color);
+    color: var(--current-text-color);
+}
+
+/* --- Footer --- */
+.footer-section {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 4rem 0 2rem 0;
+}
+.footer-section h5, .footer-section .footer-logo-text {
+    color: var(--footer-heading);
+}
+.footer-section .footer-tagline, .footer-section .footer-links a {
+    color: var(--footer-text);
+}
+.footer-section .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.footer-section hr {
+    border-color: var(--footer-border);
+}
+.footer-section .social-icons a {
+    color: var(--footer-text);
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+}
+.footer-section .social-icons a:hover {
+    color: #fff;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .hero-section {
+        padding: 4rem 0;
+        text-align: center;
+    }
+    .hero-text-content h1 {
+        font-size: 2.75rem;
+    }
+    .hero-image-container {
+        margin-top: 3rem;
+    }
+    .navbar-collapse {
+        background-color: var(--current-bg-color);
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid var(--current-border-color);
+    }
+    .navbar-nav {
+        padding-top: 1rem;
+    }
+    .btn-nav-login {
+        display: block;
+        padding: 0.5rem 0;
+    }
+    .btn-nav-demo {
+        display: block;
+        width: fit-content;
+        margin-top: 0.5rem;
+    }
+    .footer-section .text-start {
+        text-align: center !important;
+    }
+    .footer-section .footer-logo-col {
+        margin-bottom: 2rem;
+    }
+}
